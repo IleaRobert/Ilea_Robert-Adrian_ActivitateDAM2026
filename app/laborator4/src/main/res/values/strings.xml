@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Laborator4</string>
+    <string name="introduceti_marca">Introduceti marca:</string>
+    <string-array name="tip_imprimanta_array">
+        <item>Laser</item>
+        <item>Inkjet</item>
+        <item>Termică</item>
+        <item>Matriceală</item>
+    </string-array>
+</resources>

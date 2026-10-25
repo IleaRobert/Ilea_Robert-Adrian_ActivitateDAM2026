@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F7FA"
+    tools:context=".Adauga_Imprimanta_AI">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✨ Formular Inteligent Imprimantă"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1A202C"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@android:color/white"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <EditText
+                    android:id="@+id/textMarcaAI"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Marcă Imprimantă"
+                    android:background="@drawable/ic_launcher_background"
+                    android:backgroundTint="#EDF2F7"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="12dp" />
+
+                <EditText
+                    android:id="@+id/textModelAI"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Model Imprimantă"
+                    android:background="@drawable/ic_launcher_background"
+                    android:backgroundTint="#EDF2F7"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tip Tehnologie (Spinner):"
+                    android:textColor="#4A5568"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerTipAI"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#EDF2F7"
+                    android:layout_marginBottom="16dp" />
+
+                <Switch
+                    android:id="@+id/switch1AI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Este Pornită?"
+                    android:textSize="16sp"
+                    android:textColor="#2D3748"
+                    android:layout_marginBottom="12dp" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxAI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Are conectivitate Wi-Fi?"
+                    android:textSize="16sp"
+                    android:textColor="#2D3748"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calitate Tipărire (Rating):"
+                    android:textColor="#4A5568"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <RatingBar
+                    android:id="@+id/ratingBarAI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="0.5"
+                    android:rating="4.0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="24dp" />
+
+                <Button
+                    android:id="@+id/btnSalvareDateAI"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Salvează Imprimanta (AI)"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#4C51BF"
+                    android:textColor="@android:color/white"
+                    android:onClick="culegeDateAI" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
