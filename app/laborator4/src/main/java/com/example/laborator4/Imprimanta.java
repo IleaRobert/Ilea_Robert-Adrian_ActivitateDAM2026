@@ -2,7 +2,7 @@ package com.example.laborator4;
 
 import java.io.Serializable;
 
-public class Imprimanta  {
+public class Imprimanta implements Serializable {
     String marca;
     String model;
     boolean estePornita;

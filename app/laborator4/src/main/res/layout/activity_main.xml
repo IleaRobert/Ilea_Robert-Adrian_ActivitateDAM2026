@@ -28,13 +28,12 @@
         android:onClick="deschideActivitateAdaugareAI"
         />
 
-    <TextView
-        android:textSize="20sp"
-        android:layout_marginTop="50dp"
-        android:id="@+id/textView"
+    <Button
+        android:layout_marginTop="12dp"
+        android:id="@+id/DeschidereActivitate3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Lista Imprimante" />
 
-        android:text="TextView" />
 
 </LinearLayout>

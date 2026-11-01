@@ -3,6 +3,8 @@ package com.example.laborator4;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -12,6 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +30,21 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+        Button btnDeschideActivitate3 = findViewById(R.id.DeschidereActivitate3);
+        btnDeschideActivitate3.setOnClickListener(v -> {
+
+            Intent it = new Intent(this, Activitate_3.class);
+            it.putExtra("limp", listaImprimante);
+            startActivity(it);
+
+
+        });
+
+
+
+
     }
 
 
@@ -41,6 +61,10 @@ public class MainActivity extends AppCompatActivity {
         Intent it = new Intent(this, Adauga_Imprimanta_AI.class);
         startActivityForResult(it, 20);
     }
+
+
+    ArrayList<Imprimanta> listaImprimante  = new ArrayList<>();
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -59,12 +83,26 @@ public class MainActivity extends AppCompatActivity {
 
                 Imprimanta imprimanta = new Imprimanta(marca, model, estePornita, areWIFI, notaTiparire);
 
-                TextView tv = findViewById(R.id.textView);
-                tv.setText(imprimanta.toString());
+                listaImprimante.add(imprimanta);
             }
+
+
+
 
         }
 
-
     }
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
